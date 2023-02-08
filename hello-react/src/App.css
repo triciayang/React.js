@@ -1,0 +1,72 @@
+:root {
+  --col_point: palevioletred;
+}
+.App {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 120px calc(100vh - 120px - 50px) 50px;
+}
+.app-header {
+}
+.app-header__top {
+  display: flex;
+  height: 80px;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-bottom: 1px solid #ddd;
+  background-color: var(--col_point);
+}
+.app-header__btm {
+  height: 40px;
+  border-bottom: 1px solid #ddd;
+}
+.app-header__nav {
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(5, minMax(0, 1fr));
+  grid-auto-rows: 1fr;
+}
+.app-header__nav a {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #333;
+}
+.app-header__nav a + a {
+  border-left: 1px solid #ddd;
+}
+.app-header__nav a:visited {
+  color: #333;
+}
+.app-header__nav a.on {
+  position: relative;
+  font-weight: bold;
+  color: var(--col_point);
+}
+.app-header__nav a.on::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: var(--col_point);
+  bottom: -1px;
+  left: 0;
+}
+.app-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.app-footer {
+  display: flex;
+  border-top: 1px solid #ddd;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.app-footer b {
+  color: var(--col_point);
+}
